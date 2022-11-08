@@ -2,7 +2,7 @@
 Experiment 3 for Introduction to robotics
 
 ## Default Motor-port layout
-You can adjust the port order as you want in the $n_{th}$ line of main.py
+You can adjust the port order as you want in the line 18-20 of main.py
 - A $\to$ base motor, the first R joint
 - B $\to$ elbow motor, the second R joint
 - C $\to$ end effector, the pen lifting mechanism
