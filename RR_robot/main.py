@@ -15,9 +15,9 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 ev3 = EV3Brick()
 
 ## Adjust the port order here
-base_motor = Motor.(Port.A)
-elbow_motor = Motor.(Port.B)
-end_motor = Motor.(Port.C)
+base_motor = Motor(Port.A)
+elbow_motor = Motor(Port.B)
+end_motor = Motor(Port.C)
 
 # The robot layout should be like this in the initial state
 #                                          
@@ -35,21 +35,13 @@ end_motor = Motor.(Port.C)
 ## Pen lifting
 ### Lifting the pen
 def lift_wrist():
-    end_motor.run_angle(10, 45) # lift the pen by 45 degrees, + or - can be later adjusted
+    end_motor.run_angle(40, 45) # lift the pen by 45 degrees, + or - can be later adjusted
     end_motor.hold()
     wait(1000)
 
-### Dorpping down the pen
-def lift_wrist():
-    end_motot.run_angle(10, -45) # drop down the pen by 45 degrees back, + or - can be later adjusted
-    end_motot.hold()
+### Dropping down the pen
+def drop_wrist():
+    end_motor.run_angle(40, -45) # drop down the pen by 45 degrees back, + or - can be later adjusted
+    end_motor.hold()
     wait(1000)
 
-
-## Use the matlab file from Mechanism to wirte the logic
-### Draw a vertical line
-def draw_vertical_line(length):
-    
-
-### Draw a perpendicular line
-def draw_perpendicular_line(length):
